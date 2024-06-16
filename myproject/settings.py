@@ -31,11 +31,18 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    "polls.apps.PollsConfig",
+    #管理（admin）サイト。
     'django.contrib.admin',
+    #認証システム
     'django.contrib.auth',
+    #コンテンツタイプフレームワーク
     'django.contrib.contenttypes',
+    #セッションフレームワーク
     'django.contrib.sessions',
+    #メッセージフレームワーク
     'django.contrib.messages',
+    #静的ファイルの管理フレームワーク
     'django.contrib.staticfiles',
 ]
 
@@ -75,6 +82,7 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 
 DATABASES = {
     'default': {
+        #mysql->mariaDBを使用している
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'test',
         'USER': 'root',
@@ -112,9 +120,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ja'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Tokyo'
 
 USE_I18N = True
 
